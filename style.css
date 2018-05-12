@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+.page-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.main-story {
+    flex: 1;
+    position: relative;
+    margin: 0 0 25px 0;
+}
+
+.main-story img {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+a {
+    color: lightblue;
+}
+
+.story-intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+    word-wrap: wrap;
+}
+
+h1,
+h2 {
+    margin: 0 0 10px 0;
+}
+
+.story-intro h1 {
+    font-size: 2.5em;
+}
+
+.story-intro p {
+    margin: 0;
+}
+
+.sub-stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0 0 25px 0;
+}
+
+.sub-story {
+    margin-right: 25px;
+    width: 250px;
+    position: relative;
+    font-size: 80%;
+}
+
+.last {
+    margin-right: 0;
+}
+
+@media screen and (max-width:767px) {
+    .sub-stories {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .sub-story {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .story-intro {
+        width: inherit;
+    }
+    .main-story .story-intro {
+        width: 100%;
+    }
+    .sub-stories {
+        justify-content: space-around;
+    }
+    .sub-story {
+        flex: 1 1 340px;
+        /* margin: 0 auto; */
+    }
+    .last {
+        /* flex: 1 0 600px; */
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1199px) {
+    .story-intro {
+        width: inherit;
+    }
+    .main-story .story-intro {
+        width: 100%;
+    }
+    .sub-stories {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .story-intro {
+        width: inherit;
+    }
+    .main-story .story-intro {
+        width: 100%;
+    }
+    .sub-stories {
+        justify-content: space-around;
+    }
+}
+
+
+/* Extra small devices (phones, less than 768px) (1 image)
+Small devices (tablets, 768px and up) (2 images)
+Medium devices (desktops, 992px and up)
+Large devices (large desktops, 1200px and up) */
