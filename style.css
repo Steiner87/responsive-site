@@ -21,6 +21,7 @@
 
 img {
     display: block;
+    width: 100%;
 }
 
 a {
@@ -65,8 +66,6 @@ h2 {
 }
 
 .sub-story {
-    margin-right: 25px;
-    width: 250px;
     position: relative;
     font-size: 80%;
 }
@@ -76,55 +75,86 @@ h2 {
 }
 
 @media screen and (max-width:767px) {
-    .sub-stories {
-        flex-direction: column;
-        justify-content: space-around;
+    .story-intro {
+        width: 100%;
     }
+    .main-story .story-intro {
+        width: 100%;
+    }
+    .sub-stories {}
     .sub-story {
-        margin: auto;
+        width: 100%;
+    }
+    .sub-story:not(:first-child) {
+        margin-top: 25px;
     }
 }
 
 @media screen and (min-width:768px) and (max-width:992px) {
     .story-intro {
-        width: inherit;
+        width: 100%;
     }
     .main-story .story-intro {
         width: 100%;
     }
     .sub-stories {
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
     }
     .sub-story {
-        flex: 1 1 340px;
-        /* margin: 0 auto; */
+        flex: 1 1 350px;
+    }
+    .sub-story:first-child {
+        margin-right: 25px;
     }
     .last {
-        /* flex: 1 0 600px; */
+        margin-top: 25px;
     }
 }
 
 @media screen and (min-width:993px) and (max-width:1199px) {
     .story-intro {
-        width: inherit;
+        width: 100%;
     }
     .main-story .story-intro {
         width: 100%;
     }
     .sub-stories {
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-stories {}
+    .sub-story {
+        flex: 1 1 auto;
+    }
+    .sub-story:first-child {
+        margin-right: 25px;
+    }
+    .last {
+        margin-left: 25px;
     }
 }
 
 @media screen and (min-width:1200px) {
     .story-intro {
-        width: inherit;
+        width: 100%;
     }
     .main-story .story-intro {
         width: 100%;
     }
     .sub-stories {
-        justify-content: space-around;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-stories {}
+    .sub-story {
+        flex: 1 1 auto;
+    }
+    .sub-story:first-child {
+        margin-right: 25px;
+    }
+    .last {
+        margin-left: 25px;
     }
 }
 
